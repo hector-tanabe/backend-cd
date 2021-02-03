@@ -8,6 +8,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'npm --version'
+                sh 'npm install --save-dev webpack-cli'
                 sh 'npm run build'
             }
         }
