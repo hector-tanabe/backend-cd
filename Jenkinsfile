@@ -25,7 +25,7 @@ pipeline {
         stage('Publish') {
             steps {
                 echo 'Publishing...'
-                sh 'npm publish'
+                sh 'npm publish ./dist/app.js'
             }
         }
         stage('Deploy') {
