@@ -11,7 +11,7 @@
     "start-hot": "node server.js",
     "start": "webpack-dev-server --content-base public/ --inline --port 3001"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^8.0.0",
     "@angular/cdk": "^8.0.0",
