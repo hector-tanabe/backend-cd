@@ -25,7 +25,7 @@ pipeline {
         stage('Publish') {
             steps {
                 echo 'Publishing...'
-                sh 'npm publish'
+                sh 'npm publish --registry http://192.168.0.7:8081/repository/backend/'
             }
         }
         stage('Deploy') {
