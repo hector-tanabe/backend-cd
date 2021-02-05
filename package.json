@@ -14,7 +14,8 @@
   "directories" : {
       "dist": "./dist",
       "root": "./"
-  },
+  }, 
+  "main": "./dist/app.js",
   "private": false,
   "dependencies": {
     "@angular/animations": "^8.0.0",
