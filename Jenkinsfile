@@ -37,7 +37,7 @@ pipeline {
                     nexusVersion: 'nexus3',
                     protocol: 'https',
                     nexusUrl: '192.168.0.7:8081',
-                    version: 0.0.0,
+                    version: tagG,
                     repository: 'backend',
                     credentialsId: 'jenkins-user',
                     artifacts: [
