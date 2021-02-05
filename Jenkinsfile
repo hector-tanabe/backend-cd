@@ -41,11 +41,11 @@ pipeline {
                         ]
                     )
                 }*/
-                sh 'npm adduser --registry=http://192.168.0.7:8081/repository/npm-group/'
+                // sh 'npm adduser --registry=http://192.168.0.7:8081/repository/npm-group/'
                 // sh 'jenkins-user'
                 // sh '12345'
                 // sh 'hectoralejandro2121@gmail.com'
-                sh 'npm publish --registry http://192.168.0.7:8081/repository/npm-group/'
+                sh 'npm publish --registry http://192.168.0.7:8081/repository/npm-group/:_authToken=NpmToken.97519605-bd0c-3d21-ae38-e58420da0e27'
             }
         }
         stage('Deploy') {
