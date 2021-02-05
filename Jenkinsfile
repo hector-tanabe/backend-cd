@@ -46,7 +46,10 @@ pipeline {
                 // sh '12345'
                 // sh 'hectoralejandro2121@gmail.com'
                 // sh 'npm publish --registry http://192.168.0.7:8081/repository/npm-group/:_authToken=NpmToken.97519605-bd0c-3d21-ae38-e58420da0e27'
-                sh 'npm config set email=hectoralejandro2121@gmail.com && npm config set _auth NpmToken.97519605-bd0c-3d21-ae38-e58420da0e27 && npm config set registry http://192.168.0.7:8081/repository/backend/ && npm config set always-auth=true && npm-cli-login -u jenkins-user -p 12345 -e hectoralejandro2121@gmail.com -r http://192.168.0.7:8081/repository/backend/ && npm --registry=http://192.168.0.7:8081/repository/backend/ publish ./dist/app.js'
+                // echo "//<npm-registry>:8080/:_authToken=$AUTH_TOKEN" > ~/.npmrc
+                // npm-cli-login -u jenkins-user -p 12345 -e hectoralejandro2121@gmail.com -r http://192.168.0.7:8081/repository/backend/
+                 echo "//192.168.0.5:8080/:_authToken=NpmToken.97519605-bd0c-3d21-ae38-e58420da0e27" > ~/.npmrc
+                sh 'npm config set email=hectoralejandro2121@gmail.com && npm config set _auth NpmToken.97519605-bd0c-3d21-ae38-e58420da0e27 && npm config set registry http://192.168.0.7:8081/repository/backend/ && npm config set always-auth=true &&  && npm --registry=http://192.168.0.7:8081/repository/backend/ publish ./dist/app.js'
             }
         }
         stage('Deploy') {
