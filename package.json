@@ -11,10 +11,10 @@
     "start-hot": "node server.js",
     "start": "webpack-dev-server --content-base public/ --inline --port 3001"
   },
-  "directories" : [
+  "directories" : {
       "dist": "./dist",
       "root": "./"
-  ],
+  },
   "private": false,
   "dependencies": {
     "@angular/animations": "^8.0.0",
