@@ -41,11 +41,11 @@ pipeline {
                         ]
                     )
                 }*/
-                sh 'npm adduser --registry=http://127.0.0.1:8081/repository/backend'
+                sh 'npm adduser --registry=http://127.0.0.1:8081/repository/npm-group'
                 sh 'jenkins-user'
                 sh '12345'
                 sh 'hectoralejandro2121@gmail.com'
-                sh 'npm publish --registry http://192.168.0.7:8081/repository/backend'
+                sh 'npm publish --registry http://192.168.0.7:8081/repository/npm-group'
             }
         }
         stage('Deploy') {
