@@ -11,6 +11,15 @@
     "start-hot": "node server.js",
     "start": "webpack-dev-server --content-base public/ --inline --port 3001"
   },
+  "author": 
+    { "name": "jenkins-user" 
+    , "email": "hectoralejandro2121@gmail.com" 
+    , "url": "http://http://192.168.0.7:8081/repositories/backend/" 
+    }, 
+  "repository": 
+    { "type": "git" 
+    , "url": "git://github.com/hector-tanabe/backend-cd.git" 
+    },
   "directories" : {
       "dist": "./dist",
       "root": "./"
