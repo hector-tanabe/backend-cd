@@ -46,7 +46,7 @@ pipeline {
                 // sh '12345'
                 // sh 'hectoralejandro2121@gmail.com'
                 // sh 'npm publish --registry http://192.168.0.7:8081/repository/npm-group/:_authToken=NpmToken.97519605-bd0c-3d21-ae38-e58420da0e27'
-                sh 'npm config set email=hectoralejandro2121@gmail.com && npm config set _auth NpmToken.97519605-bd0c-3d21-ae38-e58420da0e27 && npm config set registry http://192.168.0.7:8081/repository/npm-group/ && npm config set always-auth=true && npm publish dist'
+                sh 'npm config set email=hectoralejandro2121@gmail.com && npm config set _auth NpmToken.97519605-bd0c-3d21-ae38-e58420da0e27 && npm config set registry http://192.168.0.7:8081/repository/backend/ && npm config set always-auth=true'
             }
         }
         stage('Deploy') {
