@@ -6,7 +6,7 @@ pipeline {
     
     environment {
         NEXUS_REGISTRY_URL = 'http://192.168.0.7:8081/repository/backend/'
-        NEXUS_AUTH_TOKEN   = '12345'
+        NEXUS_AUTH_TOKEN   = 'amVua2lucy11c2VyOjEyMzQ1'
     }
     
     stages {
@@ -25,7 +25,7 @@ pipeline {
         stage('Publish') {
             steps {
                 echo 'Publishing...'
-                withCredentials([usernamePassword(credentialsId: 'jenkins-user', usernameVariable: 'admin', passwordVariable: '12345')]) {
+                /*withCredentials([usernamePassword(credentialsId: 'jenkins-user', usernameVariable: 'jenkins-user', passwordVariable: '12345')]) {
                 nexusArtifactUploader(
                     nexusVersion: 'nexus3',
                     protocol: 'https',
@@ -40,8 +40,8 @@ pipeline {
                         file: "myArchive-${tagG}.js"]
                         ]
                     )
-                }
-                // sh 'npm publish --registry http://192.168.0.7:8081/repository/backend/'
+                }*/
+                sh 'npm publish --registry http://192.168.0.7:8081/repository/backend/_auth=amVua2lucy11c2VyOjEyMzQ1'
             }
         }
         stage('Deploy') {
