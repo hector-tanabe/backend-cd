@@ -5,13 +5,6 @@ pipeline {
     }
     
     environment {
-        NEXUS_VERSION = "nexus3"
-        NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "http://192.168.0.7:8081"
-        NEXUS_REPOSITORY = "backend"
-        NEXUS_CREDENTIAL_ID = "jenkins-user"
-    }
-    environment {
         NEXUS_REGISTRY_URL = 'http://192.168.0.7:8081/repository/backend/'
         NEXUS_AUTH_TOKEN   = '12345'
     }
