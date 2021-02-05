@@ -7,7 +7,6 @@ pipeline {
     environment {
         NEXUS_REGISTRY_URL = 'http://192.168.0.7:8081/repository/backend/'
         NEXUS_AUTH_TOKEN   = 'amVua2lucy11c2VyOjEyMzQ1'
-        USER_NEXUS = 'jenkins-user
     }
     
     stages {
